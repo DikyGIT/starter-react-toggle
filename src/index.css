@@ -1,0 +1,110 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-one {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.section-one button {
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rebeccapurple;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* Navbar */
+.section-two {
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.navbar .navbar-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-box .menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar .navbar-box .menu li {
+  list-style-type: none;
+}
+
+.navbar .navbar-box .menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar-box i {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .navbar .navbar-box .menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: baseline;
+    height: 100vh;
+    width: 300px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+
+  .navbar .navbar-box .menu li a {
+    color: #242424;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .navbar .navbar-box i {
+    display: block;
+    font-size: 32px;
+  }
+}
